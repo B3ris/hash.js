@@ -1,0 +1,41 @@
+def toplama(sayi1, sayi2):
+    return sayi1 + sayi2
+
+def cikarma(sayi1, sayi2):
+    return sayi1 - sayi2
+
+def carpma(sayi1, sayi2):
+    return sayi1 * sayi2
+
+def bolme(sayi1, sayi2):
+    if sayi2 != 0:
+        return sayi1 / sayi2
+    else:
+        print("Bir sayıyı 0'a bölemezsiniz.")
+
+print("İşlem Türünü Seçin:")
+print("1- Toplama")
+print("2- Çıkarma")
+print("3- Çarpma")
+print("4- Bölme")
+
+secim = int(input("Seçiminizi yapın (1-4): "))
+
+sayi1 = int(input("Birinci sayıyı girin: "))
+sayi2 = int(input("İkinci sayıyı girin: "))
+
+if secim == 1:
+    sonuc = toplama(sayi1, sayi2)
+    print("Sonuç:", sonuc)
+elif secim == 2:
+    sonuc = cikarma(sayi1, sayi2)
+    print("Sonuç:", sonuc)
+elif secim == 3:
+    sonuc = carpma(sayi1, sayi2)
+    print("Sonuç:", sonuc)
+elif secim == 4:
+    sonuc = bolme(sayi1, sayi2)
+    if sonuc is not None:
+        print("Sonuç:", sonuc)
+else:
+    print("Geçersiz seçim. Lütfen 1-4 arasında bir sayı seçin.")
